@@ -7,7 +7,7 @@
       "title": "KÜR IPTV Portalını Başlat",
       "icon": "https://kraycik.github.io/logo.png",
       "name": "Start_Portal",
-      "action": "link:https://kraycik.github.io.kuriptv/start.json"
+      "action": "link:https://kraycik.github.io/kuriptv/start.json"
     }
   ]
 }
