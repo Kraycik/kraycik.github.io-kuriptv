@@ -1,0 +1,6 @@
+{
+  "name": "KÜR IPTV",
+  "version": "1.0.0",
+  "parameter": "menu:https://kraycik.github.io.kuriptv/msx/start.json",
+  "action": "link:https://kraycik.github.io.kuriptv/index.html?mode=tvapp"
+}
