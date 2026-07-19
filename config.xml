@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/iptvkur" version="0.2.2" viewmodes="maximized">
+    
+    <!-- 1. TIZEN SİSTEM PROFAYLI VƏ TƏTBİQİNİN DOĞRU ALQORİTMİ -->
+    <!-- required_version parametrini tamamilə sildik, çünki TV tətbiqlərində profil versiyası yetərlidir -->
+    <tizen:application id="rnL3hCtpVA.iptvkur" package="rnL3hCtpVA"/>
+    
+    <!-- Bütün tizen versiyaları (Tizen 5.0, 5.5, 6.0, 6.5, 7.0, 8.0+) dəstəyi üçün minimum versiyanı 5.0 təyin etdik -->
+    <tizen:profile name="tv-samsung" version="5.0"/>
+    
+    <!-- 2. STANDART W3C TEQLƏRİ -->
+    <name>iptvkur</name>
+    <icon src="icon.png"/> <!-- Əgər loqo img qovluğundadırsa, bunu "img/icon.png" edin -->
+    <content src="index.html"/>
+    
+    <!-- 🌐 Firebase REST API və IPTV Axınları Üçün İcazələr -->
+    <access origin="*" subdomains="true"/>
+    <access origin="https://kuiptv-ce646-default-rtdb.europe-west1.firebasedatabase.app" subdomains="true"/>
+
+    <!-- 📺 EKRAN NİZAMLAMALARI: Full HD 1920x1080 Ekran Optimizasiyası (Düzəldildi) -->
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <tizen:screen-resolution width="1920" height="1080"/>
+    <tizen:metadata key="http://tizen.org" value="extensive"/>
+
+    <!-- 🛡️ SAMSUNG TV VƏ INTERNET PRIVILEGES (Rəsmi Standartlar) -->
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>            <!-- İnternet girişi -->
+    <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>      <!-- Pult düymələrini tanımaq üçün -->
+    <tizen:privilege name="http://tizen.org/privilege/mediacontrol"/>        <!-- Video pleyer idarəsi -->
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>  <!-- Tətbiq açılış idarəsi -->
+    <tizen:privilege name="http://samsung.com/privilege/avplay"/>            <!-- Samsung TV Hardware AVPlay API -->
+    <tizen:privilege name="http://samsung.com/privilege/productinfo"/>       <!-- Cihaz ID-sini (DUID) rəsmən almaq üçün -->
+
+    <!-- 🎮 APPARAT VƏ PULT AYARLARI -->
+    <tizen:setting screen-orientation="landscape" context-menu="disable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+
+</widget>
